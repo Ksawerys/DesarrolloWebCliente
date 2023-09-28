@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    </head>
+<body>
+    <form id="formulario">
+        <label for="iban_part1">IBAN</label>
+        <input type="text" onchange="deleteCVV()" id="iban_part1" maxlength="4" size="4">
+        <input type="text" onchange="deleteCVV()" id="iban_part2" maxlength="20" size="20"><br><br>
+        
+        <label for="tarjeta">Tarjeta:</label>
+        <input type="text" onchange="deleteCVV()" id="numero_tarjeta" maxlength="16" size="16">
+        <input type="text"  id="cvv" maxlength="3" size="3"><br><br>
+        
+        <button type="button" onclick="validarFormulario()">Guardar</button>
+    </form>
+    
+    <div id="mensaje_error" style="color: red;"></div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
