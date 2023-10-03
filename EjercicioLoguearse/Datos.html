@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <title>Perfil de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+       
+        .save, .reset {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s; 
+}
+
+.save {
+    background-color: #007BFF;
+}
+
+.reset {
+    background-color: #FF5733;
+}
+
+.save:hover {
+    background-color: #0056b3;
+}
+
+.reset:hover {
+    background-color: #D32F00; 
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Perfil de Usuario</h1>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <td><input type="text" id="Nombre"></td>
+            </tr>
+            <tr>
+                <th>Primer Apellido</th>
+                <td><input type="text" id="PrimerApellido"></td>
+            </tr>
+            <tr>
+                <th> Segundo Apellido</th>
+                <td><input type="text" id="SegundoApellido"></td>
+            </tr>
+            <tr>
+                <th>DNI</th>
+                <td><input type="text" id="DNI"></td>
+            </tr>
+            <tr>
+                <th>Fecha de nacimiento</th>
+                <td><input type="text" id="fechaNacimiento"></td>
+            </tr>
+            </table>
+    </div>
+        <input class="save" onclick="saveData()"  type="submit" id="save" value="save">
+        <input class="reset" onclick="resetValues()"  type="submit" id="reset" value="reset">
+</body>
+</html>
